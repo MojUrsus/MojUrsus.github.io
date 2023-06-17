@@ -11,10 +11,10 @@ const NavLink = ({ children }: { children: ReactNode }) => (
         px={2}
         py={1}
         rounded={'md'}
-        color='#FAFAFA'
+        color='white'
         _hover={{
             textDecoration: 'none',
-            bg: '#505d6b',
+            bg: 'gray.200',
         }}
         href={'#'}>
         {children}
@@ -24,7 +24,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 export default function Navigation() {
     return (
         <>
-            <Box bg='#343C45' px={10}>
+            <Box bg='gray.100' px={10}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <NavLink><Heading as='h3' size='md'>MÓJ URSUS</Heading></NavLink>
                 </Flex>
