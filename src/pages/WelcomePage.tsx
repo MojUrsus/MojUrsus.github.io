@@ -1,4 +1,4 @@
-import { Flex, Box, Image, Heading, Text, AbsoluteCenter, Center } from '@chakra-ui/react'
+import { Flex, Box, Image, Heading, Text, Center } from '@chakra-ui/react'
 
 const WelcomePage = () => {
     return <Box h='full'>
