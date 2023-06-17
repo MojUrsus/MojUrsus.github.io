@@ -7,7 +7,7 @@ export const theme = extendTheme({
         global: {
             "html, body": {
                 fontFamily: "'Metropolis', sans-serif",
-                color: "white",
+                color: "gray.100",
                 bg: "white",
             },
         },

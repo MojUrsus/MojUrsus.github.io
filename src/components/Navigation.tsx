@@ -13,8 +13,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
         rounded={'md'}
         color='white'
         _hover={{
-            textDecoration: 'none',
-            bg: 'gray.200',
+            textDecoration: 'none'
         }}
         href={'#'}>
         {children}
