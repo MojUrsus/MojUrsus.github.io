@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Heading, Input, VStack, Text, FormControl, FormLabel, Switch, Button } from '@chakra-ui/react';
+import { Box, SimpleGrid, Heading, Input, VStack, Text, FormControl, FormLabel, Switch, Button, FormHelperText } from '@chakra-ui/react';
 
 const ContactPage = () => {
     return <Box
@@ -15,22 +15,22 @@ const ContactPage = () => {
                 </Text>
             </VStack>
             <VStack spacing={2}>
-                <Input placeholder='Imię *' bg={'white'}></Input>
-                <Input placeholder='Nazwisko *' bg={'white'}></Input>
-                <Input placeholder='Email *' bg={'white'}></Input>
-                <FormControl display='flex' alignItems='center'>
+                <Input placeholder='Imię *' bg={'white'} color={'gray.100'}></Input>
+                <Input placeholder='Nazwisko *' bg={'white'} color={'gray.100'}></Input>
+                <Input placeholder='Email *' bg={'white'} color={'gray.100'} type='email'></Input>
+                <FormControl display='flex' alignItems='center' isRequired>
                     <Switch id='im-owner' paddingRight={3}/>
                     <FormLabel htmlFor='im-owner' mb='0'>
                         jestem właścicielem
                     </FormLabel>
                 </FormControl>
-                <FormControl display='flex' alignItems='center'>
+                <FormControl display='flex' alignItems='center' isRequired>
                     <Switch id='im-tenant' paddingRight={3} />
                     <FormLabel htmlFor='im-tenant' mb='0'>
                         jestem najemcą
                     </FormLabel>
                 </FormControl>
-                <FormControl display='flex' alignItems='center'>
+                <FormControl display='flex' alignItems='center' isRequired>
                     <Switch id='terms-and-conditions-agreement' paddingRight={3} />
                     <FormLabel htmlFor='terms-and-conditions-agreement' mb='0'>
                         akceptuję requlamin
