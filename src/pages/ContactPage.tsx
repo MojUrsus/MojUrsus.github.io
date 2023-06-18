@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Heading, Input, VStack, Text, FormControl, FormLabel, Switch, Button, FormHelperText } from '@chakra-ui/react';
+import { Box, SimpleGrid, Heading, Input, VStack, Text, FormControl, FormLabel, Switch, Button } from '@chakra-ui/react';
 
 const ContactPage = () => {
     return <Box
