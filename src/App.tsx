@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import WelcomePage from './pages/WelcomePage';
 import ContactPage from './pages/ContactPage';
 import KeyPointsPage from './pages/KeyPointsPage';
+import NeighborsAndOwnersPage from './pages/NeighborsAndOwnersPage';
 
 const Page = ({ children }: { children: ReactNode }) => (
   <Box w='100%'>
@@ -27,6 +28,9 @@ function App() {
         </Page>
         <Page>
           <KeyPointsPage />
+        </Page>
+        <Page>
+          <NeighborsAndOwnersPage />
         </Page>
         <Footer />
       </VStack>
