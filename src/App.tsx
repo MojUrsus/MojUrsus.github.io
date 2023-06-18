@@ -1,6 +1,7 @@
 import { VStack, Box, Flex } from '@chakra-ui/react'
 import { ReactNode } from 'react';
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import WelcomePage from './pages/WelcomePage';
 import ContactPage from './pages/ContactPage';
 import KeyPointsPage from './pages/KeyPointsPage';
@@ -27,6 +28,7 @@ function App() {
         <Page>
           <KeyPointsPage />
         </Page>
+        <Footer />
       </VStack>
     </>
   )
