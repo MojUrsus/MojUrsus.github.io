@@ -6,6 +6,7 @@ import WelcomePage from './pages/WelcomePage';
 import ContactPage from './pages/ContactPage';
 import KeyPointsPage from './pages/KeyPointsPage';
 import NeighborsAndOwnersPage from './pages/NeighborsAndOwnersPage';
+import NewsletterPage from './pages/NewsletterPage';
 
 const Page = ({ children }: { children: ReactNode }) => (
   <Box w='100%'>
@@ -31,6 +32,9 @@ function App() {
         </Page>
         <Page>
           <NeighborsAndOwnersPage />
+        </Page>
+        <Page>
+          <NewsletterPage />
         </Page>
         <Footer />
       </VStack>
