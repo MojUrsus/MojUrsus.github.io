@@ -1,6 +1,5 @@
 {
   "name": "myursus-website",
-  "homepage": "https://mojursus.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
