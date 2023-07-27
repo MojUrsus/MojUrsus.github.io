@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading, VStack, Text, Button, Center } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, VStack, Text, Button, Center, Stack } from "@chakra-ui/react";
 import { ReactNode } from 'react';
 import { TbHeartHandshake } from 'react-icons/tb';
 import { FaChartArea } from 'react-icons/fa';
@@ -34,32 +34,26 @@ const points: NewsletterPointData[] = [
 ];
 
 const NewsletterPage = () => {
-    return <Box
-        id='newsletter-page'
-        padding={20}>
+    return <Box padding={16}>
         <VStack
-            w='full'
             spacing={4}>
-            <Flex w='full' alignContent={'flex-start'}>
-                <Heading>DOŁĄCZ DO SĄDIEDZKIEGO NEWSLETTERA</Heading>
-            </Flex>
+            <Heading>DOŁĄCZ DO SĄDIEDZKIEGO NEWSLETTERA</Heading>
             <Box
-                padding={10}
-                borderLeft='2px'
-                borderBottom='2px'
+                padding={8}
+                borderLeft='4px'
+                borderBottom='4px'
                 borderColor={'orange'}>
-                <HStack
-                    w='full'
-                    spacing={7}>
+                <Stack direction={{base: 'column', lg: 'row'}}
+                    spacing={8}>
                     {points.map(point => <NewsletterPoint key={point.key} title={point.title} description={point.description} icon={point.icon} />)}
-                </HStack>
+                </Stack>
                 <Center>
                     <Box
-                        id='border-hover'
-                        w={{ base: '50%', lg: '25%' }} h={20}
+                        w={{ base: '72%', lg: '24%' }}
+                        h={16}
                         bg={'white'}
                         position={'relative'}
-                        bottom={-20}>
+                        bottom={-16}>
                         <Flex
                             w={'full'} h={'full'}
                             alignContent={'center'}
@@ -79,12 +73,12 @@ const NewsletterPage = () => {
 
 const NewsletterPoint = ({ title, description, icon }: NewsletterPointData) => (
     <Box 
-        paddingBottom={5}>
+        paddingBottom={4}>
         <VStack spacing={4}>
             {icon}
             <Heading as={'h2'} size={'md'}>{title}</Heading>
             <Text align={"center"}
-                paddingX={5}>
+                paddingX={4}>
                 {description}
             </Text>
         </VStack>
