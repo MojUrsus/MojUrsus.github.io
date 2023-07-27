@@ -1,20 +1,15 @@
-import { Box, Flex, HStack, Heading, Image, VStack, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, VStack, Text, Stack } from "@chakra-ui/react";
 
 const NeighborsAndOwnersPage = () => {
     return <Box
         id='neighborsowners-page'
-        padding={20}
+        padding={16}
         color={'white'}
         bg={'gray.100'}>
-        <VStack
-            w='full'
-            spacing={3}>
-            <Flex w='full' alignContent={'flex-start'}>
-                <Heading>SĄSIEDZI I WŁAŚCICIELE</Heading>
-            </Flex>
-            <HStack
-                w='full'
-                spacing={7}>
+        <VStack spacing={4}>
+            <Heading>SĄSIEDZI I WŁAŚCICIELE</Heading>
+            <Stack direction={{base: 'column-reverse', lg: 'row'}}
+                spacing={8}>
                 <Image
                     h='full'
                     src='neighbors.jpg'
@@ -26,7 +21,7 @@ const NeighborsAndOwnersPage = () => {
                     <br />
                     Ullamcorper eget nulla facilisi etiam dignissim diam. Aliquam purus sit amet luctus venenatis. Mauris pharetra et ultrices neque ornare. Montes nascetur ridiculus mus mauris vitae ultricies. Facilisis volutpat est velit egestas dui id ornare.
                 </Text>
-            </HStack>
+            </Stack>
         </VStack>
     </Box>;
 };
