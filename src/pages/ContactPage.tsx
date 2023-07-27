@@ -7,7 +7,7 @@ const ContactPage = () => {
         color={'white'}
         bg='gray.100'
         h={'full'}>
-        <SimpleGrid columns={2} spacing={20}>
+        <SimpleGrid columns={{base: 1, lg: 2}} spacing={20}>
             <VStack spacing={7}>
                 <Heading>Dołącz do społeczności poinformowanych sąsiadów</Heading>
                 <Text>
