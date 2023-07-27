@@ -1,4 +1,4 @@
-import { VStack, Box, Flex } from '@chakra-ui/react'
+import { Container, VStack, Box } from '@chakra-ui/react'
 import { ReactNode } from 'react';
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -9,16 +9,18 @@ import NeighborsAndOwnersPage from './pages/NeighborsAndOwnersPage';
 import NewsletterPage from './pages/NewsletterPage';
 
 const Page = ({ children }: { children: ReactNode }) => (
-  <Box w='100%'>
-    <Flex flexFlow={'column'}>
-      {children}
-    </Flex >
+  <Box>
+    {children}
   </Box>
 );
 
 function App() {
   return (
-    <>
+    <Container
+      p={0}
+      minW={'100vw'}
+      overflow={'hidden'}
+    >
       <Navigation />
       <VStack spacing={0}>
         <Page>
@@ -38,7 +40,7 @@ function App() {
         </Page>
         <Footer />
       </VStack>
-    </>
+    </Container>
   )
 }
 
