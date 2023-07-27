@@ -1,4 +1,4 @@
-import { Heading, VStack, HStack, Box, Image, Text, Button, Flex } from "@chakra-ui/react";
+import { Heading, VStack, Box, Image, Text, Button, Stack } from "@chakra-ui/react";
 
 type KeyPointData =
     {
@@ -30,24 +30,24 @@ const points: KeyPointData[] = [
 ];
 
 const KeyPointsPage = () => {
-    return <Box
-        id='keypoints-page'
-        padding={20}>
-        <VStack w='full' spacing={10}>
-            <Flex w='full' alignContent={'flex-start'}>
-                <Heading>ZATRZYMAJMY WZROST OPŁAT!</Heading>
-            </Flex>
-            <HStack>
-                {points.map(point => <KeyPoint key={point.key} title={point.title} description={point.description} image={point.image} />)}
-            </HStack>
-        </VStack>
-    </Box>;
+    return (
+        <Box padding={16}>
+            <VStack spacing={8}>
+                <Heading>
+                    ZATRZYMAJMY WZROST OPŁAT!
+                </Heading>
+                <Stack direction={{base: 'column', lg: 'row'}}>
+                    {points.map(point => <KeyPoint key={point.key} title={point.title} description={point.description} image={point.image} />)}
+                </Stack>
+            </VStack>
+        </Box>
+    );
 };
 
 const KeyPoint = ({ title, description, image } : KeyPointData) => (
     <Box color={'white'}
         bg={'gray.100'}
-        paddingBottom={5}>
+        paddingBottom={4}>
         <VStack spacing={4}>
             <Image
                 h='full'
@@ -56,7 +56,7 @@ const KeyPoint = ({ title, description, image } : KeyPointData) => (
                 objectFit='cover' />
             <Heading as={'h2'} size={'md'}>{title}</Heading>
             <Text align={"center"}
-                paddingX={5}>
+                paddingX={4}>
                 {description}
             </Text>
             <Button color={'white'} bg={'orange'}>Dowiedz się więcej</Button>
