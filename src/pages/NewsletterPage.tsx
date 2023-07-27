@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading, VStack, Text, Button, Center, Stack } from "@chakra-ui/react";
+import { Box, Flex, Heading, VStack, Text, Button, Center, Stack } from "@chakra-ui/react";
 import { ReactNode } from 'react';
 import { TbHeartHandshake } from 'react-icons/tb';
 import { FaChartArea } from 'react-icons/fa';
